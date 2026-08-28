@@ -41,21 +41,22 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(139, 92, 246, 0.04) 0%,
-    transparent 60%
-  );
+  background: radial-gradient(ellipse at 50% 0%,
+      rgba(139, 92, 246, 0.04) 0%,
+      transparent 60%);
   pointer-events: none;
 }
 
 /* ── Avatar ────────────────────────────────────────── */
 @keyframes vc-glow-pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow:
       0 0 20px rgba(139, 92, 246, 0.2),
       0 0 40px rgba(139, 92, 246, 0.08);
   }
+
   50% {
     box-shadow:
       0 0 28px rgba(139, 92, 246, 0.35),
@@ -64,8 +65,13 @@
 }
 
 @keyframes vc-border-spin {
-  0% { --angle: 0deg; }
-  100% { --angle: 360deg; }
+  0% {
+    --angle: 0deg;
+  }
+
+  100% {
+    --angle: 360deg;
+  }
 }
 
 .vc-avatar-ring {
@@ -74,14 +80,12 @@
   border-radius: 50%;
   padding: 4px;
   margin: 0 auto;
-  background: conic-gradient(
-    from 0deg,
-    #8b5cf6,
-    rgba(139, 92, 246, 0.3),
-    #8b5cf6,
-    rgba(139, 92, 246, 0.3),
-    #8b5cf6
-  );
+  background: conic-gradient(from 0deg,
+      #8b5cf6,
+      rgba(139, 92, 246, 0.3),
+      #8b5cf6,
+      rgba(139, 92, 246, 0.3),
+      #8b5cf6);
   box-shadow:
     0 0 20px rgba(139, 92, 246, 0.2),
     0 0 40px rgba(139, 92, 246, 0.08);
@@ -95,7 +99,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 50%;
   display: block;
 }
 
@@ -253,6 +257,7 @@
     opacity: 0;
     transform: scale(0.9) translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -306,11 +311,9 @@
   padding: 14px 20px;
   border-radius: 999px;
   border: 1px solid rgba(139, 92, 246, 0.25);
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.1),
-    rgba(139, 92, 246, 0.05)
-  );
+  background: linear-gradient(135deg,
+      rgba(139, 92, 246, 0.1),
+      rgba(139, 92, 246, 0.05));
   color: #8b5cf6;
   font-family: "Inter", sans-serif;
   font-size: 14px;
@@ -322,11 +325,9 @@
 }
 
 .vc-save-btn:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(139, 92, 246, 0.2),
-    rgba(139, 92, 246, 0.12)
-  );
+  background: linear-gradient(135deg,
+      rgba(139, 92, 246, 0.2),
+      rgba(139, 92, 246, 0.12));
   border-color: rgba(139, 92, 246, 0.5);
   transform: translateY(-1px);
   box-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);

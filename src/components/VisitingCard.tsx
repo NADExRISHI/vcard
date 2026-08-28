@@ -8,7 +8,7 @@ import {
   X,
   Download,
 } from "lucide-react";
-import qrImage from "../assets/qr.png";
+import { QRCodeSVG } from "qrcode.react";
 import "./VisitingCard.css";
 
 export interface VisitingCardProps {
@@ -139,10 +139,13 @@ const VisitingCard: React.FC<VisitingCardProps> = ({
         {showQR && vcfData && (
           <div className="vc-qr-container">
             <div className="vc-qr-box">
-              <img
-                src={qrImage}
-                alt="QR Code"
-                className="vc-qr-image"
+              <QRCodeSVG
+                value={vcfData}
+                size={180}
+                bgColor="#ffffff"
+                fgColor="#0a0a0f"
+                level="M"
+                style={{ borderRadius: "8px", display: "block" }}
               />
             </div>
             <p className="vc-qr-hint">Scan to save contact</p>
